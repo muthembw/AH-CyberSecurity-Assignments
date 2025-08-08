@@ -1,0 +1,53 @@
+
+Test Cases Executed
+Valid Standard IPv4
+
+Input: 123.24.23.5
+
+Output: [✓] 123.24.23.5 is a valid IP address.
+
+Result: ✅ Correctly validated (expected pass)
+
+Garbage Input
+
+Input: 2222/4r5.23.45.343.4567.3445
+
+Output: [!] 2222/4r5.23.45.343.4567.3445 is not a valid IP address.
+
+Result: ✅ Correctly rejected (expected fail)
+
+All-Zero IPv4
+
+Input: 0.0.0.0
+
+Output: [✓] 0.0.0.0 is a valid IP address.
+
+Result: ✅ Correctly validated (technically valid but often suspicious)
+
+Invalid Octet Value
+
+Input: 127.9.4578. (note trailing dot)
+
+Output: [!] 127.9.4578. is not a valid IP address.
+
+Result: ✅ Correctly rejected (octets >255 are invalid)
+
+Key Findings
+The script handles both valid and invalid formats perfectly using Python's ipaddress module.
+
+Edge cases verified:
+
+All-zero IP (0.0.0.0) → Valid but should be flagged in security contexts
+
+Malformed strings with symbols (/) → Rejected
+
+Octet overflow (4578) → Rejected
+
+
+Test Summary
+Test Case	Input	Expected	Actual	Result
+Standard IPv4	123.24.23.5	Valid	Valid	✅
+Garbage Input	2222/4r5.23.45...	Invalid	Invalid	✅
+All-Zero IP	0.0.0.0	Valid	Valid	✅
+Invalid Octet	127.9.4578.	Invalid	Invalid	✅
+
