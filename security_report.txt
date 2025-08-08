@@ -1,0 +1,8 @@
+
+=== Security Scan Report (2025-08-08 22:48:14) ===
+World-writable files found:
+
+Security events in logs:
+- FAILED: 0 occurrences
+- ERROR: 0 occurrences
+- DENIED: 0 occurrences
