@@ -1,70 +1,70 @@
 # Linux Python Fundamentals Assignment - Cybersecurity Focus
 
-## Assignment 1: Security Checker Script
+## Assignment 1: Security Checker Scripts
 
 ### Script Overview
-This repository contains two Python scripts that implement fundamental cybersecurity checks:
+This repository contains three core security tools:
 
-1. **ipChecker.py** - Validates IP address formats (both IPv4 and IPv6)
-2. **password_validator.py** - Checks password strength against multiple criteria
+1. **ipChecker.py** - Validates IP address formats
+2. **password_validator.py** - Checks password strength
+3. **security.py** - Advanced security scanner (new)
 
 ### Security Checks Implemented
-#### IP Address Validator
+
+#### IP Address Validator (ipChecker.py)
 - Verifies correct IPv4/IPv6 formatting
-- Uses Python's built-in `ipaddress` module for robust validation
+- Uses Python's built-in `ipaddress` module
 - Provides clear feedback on invalid formats
 
-#### Password Validator
-- Enforces NIST-recommended password policies:
-  - Minimum 8 characters length
-  - Requires uppercase and lowercase letters
-  - Requires at least one digit
-  - Requires at least one special character
-- Uses regular expressions for pattern matching
+#### Password Validator (password_validator.py)
+- Enforces NIST-recommended policies:
+  - 8+ characters
+  - Upper/lowercase letters
+  - Numbers and special characters
+
+#### Advanced Security Scanner (security.py)
+- **File Permission Checker**:
+  - Identifies world-writable files (dangerous 777 permissions)
+  - Recursively scans directories
+  - Flags potential security risks
+
+- **Log Analyzer**:
+  - Counts security events (FAILED, ERROR, DENIED)
+  - Case-insensitive pattern matching
+  - Generates security reports
 
 ### Testing Methodology
+
 #### IP Validator Tests
-- Valid IPs: `192.168.1.1`, `0.0.0.0`, `2001:db8::1`
-- Invalid IPs: `256.300.1.1`, `127.0.0.`, `2222/4r5.23.45`
+- Valid: `192.168.1.1`, `2001:db8::1`
+- Invalid: `256.300.1.1`, `127.0.0.`
 
 #### Password Validator Tests
-- Weak passwords: `password`, `12345678`, `Password`
-- Strong password: `Secur3P@ss!2023`
+- Weak: `password123`, `qwerty`
+- Strong: `P@ssw0rd!Secure`
+
+#### Security Scanner Tests
+- World-writable files: `/tmp/testfile`
+- Log analysis: `/var/log/auth.log`
+- Tested with various permission scenarios
 
 ### Security Issues Found
-1. Many users attempt invalid IP formats
-2. Common password weaknesses observed:
-   - Missing special characters
-   - All-lowercase letters
-   - Insufficient length
+1. Common world-writable files in /tmp
+2. Excessive FAILED login attempts in logs
+3. Weak password patterns
+4. Malformed IP addresses in inputs
 
 ## Assignment 2: Cybersecurity Quiz Game
 
 ### Quiz Overview
-The `security_quiz.py` script tests knowledge of essential cybersecurity concepts through multiple-choice questions.
+The `security_quiz.py` script tests essential cybersecurity knowledge.
 
 ### Topics Covered
-1. Password security best practices
-2. Phishing attack identification
-3. Importance of software updates
-4. Secure Wi-Fi practices
-5. Social engineering awareness
-
-### Features
-- Tracks correct/wrong answers
-- Provides immediate feedback
-- Offers security tips for incorrect answers
-- Runs until user quits
-
-### Testing Results
-- Tested with various answer combinations
-- Achieved perfect score with all correct answers
-- Verified helpful tips appear for wrong answers
-
-### Key Learnings
-- Reinforced understanding of password complexity
-- Highlighted importance of regular software updates
-- Demonstrated common social engineering tactics
+1. Password security
+2. Phishing awareness
+3. System hardening
+4. Network security
+5. Social engineering
 
 ## How to Run
 ```bash
@@ -73,6 +73,9 @@ python3 ipChecker.py
 
 # Password Validator
 python3 password_validator.py
+
+# Security Scanner
+python3 security.py
 
 # Security Quiz
 python3 security_quiz.py
