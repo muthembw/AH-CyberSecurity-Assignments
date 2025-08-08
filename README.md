@@ -72,10 +72,10 @@ The `QuizGame.py` script tests essential cybersecurity knowledge.
 python3 ipChecker.py
 
 # Password Validator
-python3 password_validator.py
+python3 password_validor.py
 
 # Security Scanner
-python3 security.py
+python3 filePermissions.py
 
 # Security Quiz
-python3 security_quiz.py
+python3 QuizGame.py
