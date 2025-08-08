@@ -6,8 +6,8 @@
 This repository contains three core security tools:
 
 1. **ipChecker.py** - Validates IP address formats
-2. **password_validator.py** - Checks password strength
-3. **security.py** - Advanced security scanner (new)
+2. **password_validor.py** - Checks password strength
+3. **filePermissions.py** - Advanced security scanner (new)
 
 ### Security Checks Implemented
 
@@ -16,13 +16,13 @@ This repository contains three core security tools:
 - Uses Python's built-in `ipaddress` module
 - Provides clear feedback on invalid formats
 
-#### Password Validator (password_validator.py)
+#### Password Validator (password_validor.py)
 - Enforces NIST-recommended policies:
   - 8+ characters
   - Upper/lowercase letters
   - Numbers and special characters
 
-#### Advanced Security Scanner (security.py)
+#### Advanced Security Scanner (filePermissions.py)
 - **File Permission Checker**:
   - Identifies world-writable files (dangerous 777 permissions)
   - Recursively scans directories
@@ -57,7 +57,7 @@ This repository contains three core security tools:
 ## Assignment 2: Cybersecurity Quiz Game
 
 ### Quiz Overview
-The `security_quiz.py` script tests essential cybersecurity knowledge.
+The `QuizGame.py` script tests essential cybersecurity knowledge.
 
 ### Topics Covered
 1. Password security
