@@ -1,0 +1,27 @@
+
+Cybersecurity Topics Covered:
+The quiz covers fundamental cybersecurity concepts, including:
+
+Firewalls (network security)
+
+Password security (strong password creation)
+
+Phishing attacks (social engineering threats)
+
+Ransomware (malware that encrypts files for ransom)
+
+Principle of least privilege (access control best practices)
+
+Encryption (data confidentiality, integrity, and authentication)
+
+Zero-day vulnerabilities (unpatched security flaws)
+
+Each question is followed by a relevant security tip to reinforce learning.
+
+Testing & Results:
+I tested the quiz multiple times, deliberately answering both correctly and incorrectly to verify scoring and feedback. A perfect score (35/35) required all correct answers. Incorrect responses triggered helpful security tips (e.g., advice on avoiding phishing). The score counter, correct/wrong tallies, and exit function ("quit") worked as intended.
+
+Key Learnings:
+Creating the quiz deepened my understanding of core cybersecurity principles, particularly the importance of proactive measures like strong passwords, encryption, and least-privilege access. The security tips highlighted practical defenses (e.g., enabling firewalls, updating systems), emphasizing that cybersecurity is as much about user behavior as technical controls. Structuring the quiz also reinforced Python skills, including loops, dictionaries, and input validation.
+
+
